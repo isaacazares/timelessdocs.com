@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timeless Docs | Documentales de vida</title>
+<meta name="description" content="Documentales de vida para preservar la historia de tu familia. Entrevistas cinematográficas, archivo familiar restaurado y una película hecha para heredarse.">
+<meta property="og:title" content="Timeless Docs">
+<meta property="og:description" content="Documentales de vida para preservar la historia de tu familia.">
+<meta property="og:image" content="https://www.timelessdocs.com/assets/og.jpg">
+<meta property="og:url" content="https://www.timelessdocs.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Forum&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/*
+VOICE: silencioso, íntimo, artesanal. Como un estudio A24 de historias familiares.
+IDEA: un álbum familiar que se vuelve película: papel marfil, fotos con bordes, tira de película.
+PICTURE: hojas de álbum apiladas con fotos color sepia y una tira de cine que las cruza.
+COLOUR/TYPE: marfil #FFFDFA, arena #ECE4D8, tinta #1B1916, oliva #747761. Forum + Cormorant + Lato.
+LAYOUT: una sola página, columnas amplias, mucho aire, numerales romanos.
+*/
+:root{--ivory:#FFFDFA;--sand:#ECE4D8;--ink:#1B1916;--olive:#747761;--muted:#6b665e;--line:rgba(27,25,22,.18)}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 17px/1.7 "Lato",sans-serif;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-family:"Forum",serif;font-weight:400;letter-spacing:.04em;margin:0}
+.serif{font-family:"Cormorant Garamond",serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 max(5vw,20px)}
+
+/* Header */
+header{position:sticky;top:0;z-index:10;background:rgba(255,253,250,.94);backdrop-filter:blur(6px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.sc{border-color:var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{text-decoration:none;line-height:1.2}
+.brand b{display:block;font:400 19px "Forum",serif;letter-spacing:.14em}
+.brand span{font-size:12px;color:var(--muted);letter-spacing:.04em}
+nav{display:flex;gap:28px;font-size:14px;letter-spacing:.06em}
+nav a{text-decoration:none}
+nav a:hover{color:var(--olive)}
+.menu-btn{display:none;background:none;border:0;font:inherit;font-size:14px;letter-spacing:.08em;cursor:pointer;padding:10px 0;color:var(--ink)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center;padding-top:56px;padding-bottom:96px}
+.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.06;text-transform:uppercase;text-wrap:balance}
+.hero p{font:300 22px/1.5 "Cormorant Garamond",serif;max-width:30ch;margin:26px 0 34px;color:#3a362f}
+.btn{display:inline-block;background:var(--ink);color:var(--ivory);text-decoration:none;font-size:14px;letter-spacing:.12em;text-transform:uppercase;padding:16px 26px}
+.btn:hover{background:var(--olive)}
+.ghost{margin-left:22px;font-size:14px;letter-spacing:.08em;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px}
+.album{position:relative;aspect-ratio:1/1;max-width:540px;justify-self:end;width:100%}
+.album svg{width:100%;height:100%;display:block}
+
+/* Secciones */
+.band{padding:110px 0}
+.sand{background:var(--sand)}
+.ink{background:var(--ink);color:var(--ivory)}
+.eyebrow{font:italic 300 20px "Cormorant Garamond",serif;color:var(--olive);margin:0 0 14px}
+.ink .eyebrow{color:#b9b59c}
+h2{font-size:clamp(30px,3.6vw,46px);line-height:1.1;text-transform:uppercase;max-width:22ch}
+.lead{font:300 24px/1.55 "Cormorant Garamond",serif;max-width:46ch;margin:26px 0 0}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;margin-top:64px}
+.line{border-top:1px solid var(--line);padding-top:26px}
+.ink .line{border-color:rgba(255,253,250,.22)}
+.line h3{font-size:28px;margin-bottom:10px}
+.line p{margin:0 0 14px;color:var(--muted)}
+.ink .line p{color:#cfc9bd}
+.line ul{margin:0;padding-left:18px;color:var(--muted)}
+
+/* Proceso */
+.steps{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 56px}
+.steps li{border-top:1px solid var(--line);padding-top:22px}
+.num{font:400 15px "Forum",serif;letter-spacing:.2em;color:var(--olive)}
+.steps h3{font-size:24px;margin:10px 0 12px;line-height:1.2}
+.steps p{margin:0;color:var(--muted);font-size:16px}
+
+/* Entrega */
+.box{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:center}
+.items{list-style:none;margin:30px 0 0;padding:0}
+.items li{display:flex;gap:18px;align-items:baseline;border-bottom:1px solid rgba(255,253,250,.18);padding:16px 0;font:300 22px "Cormorant Garamond",serif}
+.items li span{font:400 13px "Forum",serif;letter-spacing:.2em;color:#b9b59c;min-width:28px}
+
+/* Filosofía */
+.quote{font:300 italic clamp(30px,4vw,50px)/1.25 "Cormorant Garamond",serif;max-width:24ch;margin:0 auto;text-align:center;text-wrap:balance}
+.quote small{display:block;font:400 14px "Lato",sans-serif;font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--olive);margin-top:28px}
+
+/* Fundador */
+.founder{max-width:760px}
+.letter p{font:300 22px/1.6 "Cormorant Garamond",serif;margin:0 0 18px;max-width:48ch}
+.sign{font:italic 400 26px "Cormorant Garamond",serif;margin-top:10px}
+.cred{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.cred a{color:var(--ink)}
+
+/* FAQ */
+.faq{margin-top:48px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font:400 22px "Cormorant Garamond",serif}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 26px "Lato";color:var(--olive);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 24px;color:var(--muted);max-width:62ch}
+
+/* Contacto */
+.contact{text-align:center}
+.contact h2{margin:0 auto}
+.contact .lead{margin:22px auto 38px}
+.contact .ways{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:34px;font-size:15px;letter-spacing:.06em}
+.contact .ways a{text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+footer{padding:34px 0 44px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
+@media(max-width:900px){
+ .hero,.two,.box,.founder-x{grid-template-columns:minmax(0,1fr);gap:40px}
+ .album{justify-self:center;max-width:420px}
+ .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--ivory);flex-direction:column;gap:0;padding:8px max(5vw,20px) 18px;border-bottom:1px solid var(--line)}
+ nav.open{display:flex}
+ nav a{padding:12px 0;border-top:1px solid var(--line)}
+ .menu-btn{display:block}
+ .band{padding:76px 0}
+ .hero{padding-top:28px;padding-bottom:64px}
+ .steps{grid-template-columns:minmax(0,1fr);gap:34px}
+ .ghost{display:inline-block;margin:20px 0 0}
+ .lead,.letter p{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap hd">
+    <a class="brand" href="#top"><b>TIMELESS DOCS</b><span>Capturing Lives. Keeping Them Forever.</span></a>
+    <button class="menu-btn" id="mb" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#proceso">Proceso</a>
+      <a href="#archivo">Archivo</a>
+      <a href="#fundador">Fundador</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div>
+      <h1>Documentales de vida para preservar la historia de tu familia</h1>
+      <p>Un estudio boutique de cine documental. Entrevistas, archivo familiar restaurado y una película hecha para heredarse.</p>
+      <a class="btn" href="#contacto">Agendar una conversación</a>
+      <a class="ghost" href="#proceso">Conocer el proceso</a>
+    </div>
+    <div class="album" aria-hidden="true">
+      <svg viewBox="0 0 540 540">
+        <defs>
+          <linearGradient id="sep1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cbb99b"/><stop offset=".55" stop-color="#8f7d63"/><stop offset="1" stop-color="#4d4334"/></linearGradient>
+          <linearGradient id="sep2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9cdb6"/><stop offset=".6" stop-color="#9c9278"/><stop offset="1" stop-color="#5b5848"/></linearGradient>
+          <radialGradient id="glow" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+          <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .22 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+          <filter id="sh" x="-10%" y="-10%" width="130%" height="130%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1B1916" flood-opacity=".16"/></filter>
+          <pattern id="sprk" width="22" height="30" patternUnits="userSpaceOnUse"><rect x="6" y="9" width="10" height="12" rx="2" fill="#FFFDFA"/></pattern>
+        </defs>
+        <!-- hoja de álbum -->
+        <rect x="40" y="30" width="460" height="480" fill="#ECE4D8" filter="url(#sh)"/>
+        <!-- foto 1 -->
+        <g transform="rotate(-6 200 190)" filter="url(#sh)">
+          <rect x="78" y="70" width="250" height="230" fill="#FFFDFA"/>
+          <rect x="92" y="84" width="222" height="168" fill="url(#sep1)"/>
+          <rect x="92" y="84" width="222" height="168" fill="url(#glow)"/>
+          <rect x="92" y="84" width="222" height="168" filter="url(#grain)" fill="#000"/>
+          <path d="M92 214 Q150 176 206 202 T314 184 V252 H92Z" fill="#3e352a" opacity=".55"/>
+          <line x1="108" y1="276" x2="210" y2="276" stroke="#8a8170" stroke-width="1"/>
+        </g>
+        <!-- foto 2 -->
+        <g transform="rotate(5 360 300)" filter="url(#sh)">
+          <rect x="250" y="200" width="210" height="250" fill="#FFFDFA"/>
+          <rect x="264" y="214" width="182" height="190" fill="url(#sep2)"/>
+          <rect x="264" y="214" width="182" height="190" fill="url(#glow)"/>
+          <rect x="264" y="214" width="182" height="190" filter="url(#grain)" fill="#000"/>
+          <circle cx="355" cy="292" r="34" fill="#4a463a" opacity=".5"/>
+          <path d="M300 404 Q355 330 410 404Z" fill="#4a463a" opacity=".5"/>
+        </g>
+        <!-- tira de película -->
+        <g transform="rotate(-14 270 430)">
+          <rect x="-20" y="402" width="600" height="72" fill="#1B1916"/>
+          <rect x="-20" y="402" width="600" height="30" fill="url(#sprk)" opacity=".85"/>
+          <rect x="-20" y="444" width="600" height="30" fill="url(#sprk)" opacity=".85"/>
+          <g fill="#5b5848" opacity=".7"><rect x="40" y="430" width="70" height="16"/><rect x="128" y="430" width="70" height="16"/><rect x="216" y="430" width="70" height="16"/><rect x="304" y="430" width="70" height="16"/><rect x="392" y="430" width="70" height="16"/></g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="band sand">
+    <div class="wrap">
+      <p class="eyebrow">El arte de preservar una vida</p>
+      <h2 class="reveal">Una película sobre quienes hicieron a tu familia</h2>
+      <p class="lead reveal">Creamos documentales íntimos que celebran la historia de una familia. Unimos entrevistas cinematográficas, escenas de la vida cotidiana y el archivo familiar restaurado para convertir décadas de recuerdos en una película que se ve, se guarda y se hereda.</p>
+      <div class="two" id="archivo">
+        <div class="line reveal">
+          <h3>Legacy Films</h3>
+          <p>Documentales personalizados donde la voz de tus padres o abuelos, sus fotografías y sus lugares se convierten en una historia contada con el cuidado del cine.</p>
+        </div>
+        <div class="line reveal">
+          <h3>Archivo familiar</h3>
+          <p>Rescatamos lo que se está perdiendo en cajones y cajas.</p>
+          <ul>
+            <li>Digitalización y restauración de fotografías y negativos</li>
+            <li>Cartas y documentos importantes</li>
+            <li>Video casero: VHS, MiniDV, Hi8, DVD</li>
+            <li>Organización de álbumes completos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="proceso">
+    <div class="wrap">
+      <p class="eyebrow">El proceso</p>
+      <h2 class="reveal">Seis etapas, un solo cuidado</h2>
+      <ol class="steps">
+        <li class="reveal"><span class="num">I</span><h3>Primera conversación</h3><p>Nos sentamos con la familia para entender la historia completa: la vida de los abuelos, los momentos clave, el material que existe y el tono que quieren para la película.</p></li>
+        <li class="reveal"><span class="num">II</span><h3>Rescate del archivo</h3><p>Digitalizamos y restauramos fotografías, negativos, videos caseros y álbumes para que cada recuerdo entre a la película con la mejor calidad posible.</p></li>
+        <li class="reveal"><span class="num">III</span><h3>La entrevista</h3><p>Una conversación íntima y sin prisa, pensada para capturar su voz, su forma de contar, sus gestos, sus risas y sus silencios.</p></li>
+        <li class="reveal"><span class="num">IV</span><h3>La vida cotidiana</h3><p>Los acompañamos en su día: cocinar, caminar, cuidar sus plantas, leer, platicar. Momentos reales que muestran quiénes son.</p></li>
+        <li class="reveal"><span class="num">V</span><h3>Edición</h3><p>Aquí la historia cobra vida. Entrevista, archivo, música y escenas se entretejen en un documental con narrativa de cine.</p></li>
+        <li class="reveal"><span class="num">VI</span><h3>La entrega</h3><p>La película llega a casa en un empaque pensado para durar generaciones, junto con todo el archivo rescatado.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band ink">
+    <div class="wrap box">
+      <div>
+        <p class="eyebrow">La entrega</p>
+        <h2 class="reveal">Algo que se puede tener en las manos</h2>
+        <p class="lead reveal" style="color:#cfc9bd">La familia no recibe un archivo de video. Recibe una pieza para guardar.</p>
+      </div>
+      <div class="reveal">
+        <ul class="items">
+          <li><span>I</span>El documental en 4K</li>
+          <li><span>II</span>Libro impreso con fotografías, stills y línea de tiempo</li>
+          <li><span>III</span>USB de lujo y copia digital en la nube</li>
+          <li><span>IV</span>El archivo familiar digitalizado y restaurado</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="quote reveal">No buscamos generar nostalgia. Buscamos preservar identidad.<small>Filosofía Timeless Docs</small></p>
+    </div>
+  </section>
+
+  <section class="band sand" id="fundador">
+    <div class="wrap founder">
+      <div class="letter reveal">
+        <p class="eyebrow">Carta del fundador</p>
+        <p>Creo profundamente que cada familia merece preservar su historia, y que la vida de nuestros padres y abuelos merece el mismo cuidado con el que se cuentan las grandes historias del cine.</p>
+        <p>Timeless Docs nació para honrar esas voces y esos recuerdos, y para convertirlos en una película que tu familia pueda ver por generaciones.</p>
+        <p class="sign">Isaac Cázares</p>
+        <p class="cred">Cineasta y editor. Ha trabajado en series y documentales para Netflix, ViX y VICE, en producciones que han pasado por SXSW y han sido reconocidas con el Premio Ariel. <a href="https://www.isaacazares.com" target="_blank" rel="noopener">isaacazares.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="preguntas">
+    <div class="wrap">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 class="reveal">Lo que suelen preguntarnos</h2>
+      <div class="faq">
+        <details><summary>¿Cuánto cuesta un documental?</summary><p>Cada película se cotiza a la medida, según la cantidad de archivo, los días de filmación y la duración final. En la primera conversación te damos una propuesta clara.</p></details>
+        <details><summary>¿Puedo pagar con tarjeta o a meses?</summary><p>Sí. Aceptamos todas las tarjetas y ofrecemos meses sin intereses mediante Mercado Pago.</p></details>
+        <details><summary>¿Cuánto dura el proceso?</summary><p>Entre 4 y 8 semanas, según la cantidad de material.</p></details>
+        <details><summary>¿Qué incluye la entrega?</summary><p>Según el paquete: el documental final, libro impreso, USB de lujo, acceso digital y la digitalización del archivo rescatado.</p></details>
+        <details><summary>¿Pueden grabar fuera de mi ciudad?</summary><p>Sí. Viajamos a cualquier parte de México y al extranjero cuando la historia lo requiere.</p></details>
+        <details><summary>¿Es un buen regalo?</summary><p>Muchas veces son los hijos o los nietos quienes nos buscan para regalarlo a sus padres o abuelos. Nos coordinamos con discreción para que la experiencia empiece desde la primera reunión.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band ink contact" id="contacto">
+    <div class="wrap">
+      <p class="eyebrow">Contacto</p>
+      <h2>Empecemos por una conversación</h2>
+      <p class="lead" style="color:#cfc9bd">Cuéntanos de quién te gustaría preservar la historia. Te respondemos personalmente.</p>
+      <a class="btn" style="background:var(--ivory);color:var(--ink)" href="mailto:hola@isaacazares.com?subject=Timeless%20Docs">Escribir un correo</a>
+      <div class="ways">
+        <a href="mailto:hola@isaacazares.com">hola@isaacazares.com</a>
+        <a href="https://www.instagram.com/timeless.docs" target="_blank" rel="noopener">Instagram @timeless.docs</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© <span id="yr">2026</span> Timeless Docs</span><span>Capturing Lives. Keeping Them Forever.</span></div>
+</footer>
+
+<script>
+{
+  const hdr = document.getElementById('hdr');
+  addEventListener('scroll', () => hdr.classList.toggle('sc', scrollY > 10), {passive: true});
+  const mb = document.getElementById('mb'), nav = document.getElementById('nav');
+  mb.addEventListener('click', () => { const o = nav.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); }));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .15});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.getElementById('yr').textContent = new Date().getFullYear();
+}
+</script>
+</body>
+</html>
