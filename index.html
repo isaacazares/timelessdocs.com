@@ -3,321 +3,160 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Timeless Docs | Documentales de vida</title>
-<meta name="description" content="Documentales de vida para preservar la historia de tu familia. Entrevistas cinematográficas, archivo familiar restaurado y una película hecha para heredarse.">
-<meta property="og:title" content="Timeless Docs">
-<meta property="og:description" content="Documentales de vida para preservar la historia de tu familia.">
-<meta property="og:image" content="https://www.timelessdocs.com/assets/og.jpg">
-<meta property="og:url" content="https://www.timelessdocs.com/">
+<title>Acervo Cine | Documentales de memoria</title>
+<meta name="description" content="Documentales de vida sobre tus padres y abuelos, hechos con el oficio del cine documental profesional. San Luis Potosí.">
+<meta name="theme-color" content="#F4F3EF">
+<meta property="og:title" content="Acervo Cine">
+<meta property="og:description" content="Cada familia es una colección. Nosotros la hacemos cine.">
+<meta property="og:image" content="https://isaacazares.github.io/timelessdocs.com/assets/og.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141414'/%3E%3Ctext x='8' y='48' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%23F4F3EF'%3EAC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Forum&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 <style>
-/*
-VOICE: silencioso, íntimo, artesanal. Como un estudio A24 de historias familiares.
-IDEA: un álbum familiar que se vuelve película: papel marfil, fotos con bordes, tira de película.
-PICTURE: hojas de álbum apiladas con fotos color sepia y una tira de cine que las cruza.
-COLOUR/TYPE: marfil #FFFDFA, arena #ECE4D8, tinta #1B1916, oliva #747761. Forum + Cormorant + Lato.
-LAYOUT: una sola página, columnas amplias, mucho aire, numerales romanos.
-*/
-:root{--ivory:#FFFDFA;--sand:#ECE4D8;--ink:#1B1916;--olive:#747761;--muted:#6b665e;--line:rgba(27,25,22,.18)}
 *{box-sizing:border-box;min-width:0}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;background:var(--ivory);color:var(--ink);font:300 17px/1.7 "Lato",sans-serif;overflow-x:clip}
-a{color:inherit}
-h1,h2,h3{font-family:"Forum",serif;font-weight:400;letter-spacing:.04em;margin:0}
-.serif{font-family:"Cormorant Garamond",serif}
-.wrap{max-width:1180px;margin:0 auto;padding:0 max(5vw,20px)}
+html{scroll-behavior:smooth}
+body{margin:0;background:#F4F3EF;color:#141414;font-family:'Instrument Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%}
+a:focus-visible{outline:2px solid #8E2F22;outline-offset:3px}
 
-/* Header */
-header{position:sticky;top:0;z-index:10;background:rgba(255,253,250,.94);backdrop-filter:blur(6px);border-bottom:1px solid transparent;transition:border-color .3s}
-header.sc{border-color:var(--line)}
-.hd{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{text-decoration:none;line-height:1.2}
-.brand b{display:block;font:400 19px "Forum",serif;letter-spacing:.14em}
-.brand span{font-size:12px;color:var(--muted);letter-spacing:.04em}
-nav{display:flex;gap:28px;font-size:14px;letter-spacing:.06em}
-nav a{text-decoration:none}
-nav a:hover{color:var(--olive)}
-.menu-btn{display:none;background:none;border:0;font:inherit;font-size:14px;letter-spacing:.08em;cursor:pointer;padding:10px 0;color:var(--ink)}
-
-/* Hero */
-.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center;padding-top:56px;padding-bottom:96px}
-.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.06;text-transform:uppercase;text-wrap:balance}
-.hero p{font:300 22px/1.5 "Cormorant Garamond",serif;max-width:30ch;margin:26px 0 34px;color:#3a362f}
-.btn{display:inline-block;background:var(--ink);color:var(--ivory);text-decoration:none;font-size:14px;letter-spacing:.12em;text-transform:uppercase;padding:16px 26px}
-.btn:hover{background:var(--olive)}
-.ghost{margin-left:22px;font-size:14px;letter-spacing:.08em;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px}
-.album{position:relative;aspect-ratio:1/1;max-width:540px;justify-self:end;width:100%}
-.album svg{width:100%;height:100%;display:block}
-
-/* Secciones */
-.band{padding:110px 0}
-.sand{background:var(--sand)}
-.ink{background:var(--ink);color:var(--ivory)}
-.eyebrow{font:italic 300 20px "Cormorant Garamond",serif;color:var(--olive);margin:0 0 14px}
-.ink .eyebrow{color:#b9b59c}
-h2{font-size:clamp(30px,3.6vw,46px);line-height:1.1;text-transform:uppercase;max-width:22ch}
-.lead{font:300 24px/1.55 "Cormorant Garamond",serif;max-width:46ch;margin:26px 0 0}
-.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;margin-top:64px}
-.line{border-top:1px solid var(--line);padding-top:26px}
-.ink .line{border-color:rgba(255,253,250,.22)}
-.line h3{font-size:28px;margin-bottom:10px}
-.line p{margin:0 0 14px;color:var(--muted)}
-.ink .line p{color:#cfc9bd}
-.line ul{margin:0;padding-left:18px;color:var(--muted)}
-
-/* Proceso */
-.steps{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 56px}
-.steps li{border-top:1px solid var(--line);padding-top:22px}
-.num{font:400 15px "Forum",serif;letter-spacing:.2em;color:var(--olive)}
-.steps h3{font-size:24px;margin:10px 0 12px;line-height:1.2}
-.steps p{margin:0;color:var(--muted);font-size:16px}
-
-/* Entrega */
-.box{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:center}
-.items{list-style:none;margin:30px 0 0;padding:0}
-.items li{display:flex;gap:18px;align-items:baseline;border-bottom:1px solid rgba(255,253,250,.18);padding:16px 0;font:300 22px "Cormorant Garamond",serif}
-.items li span{font:400 13px "Forum",serif;letter-spacing:.2em;color:#b9b59c;min-width:28px}
-
-/* Filosofía */
-.quote{font:300 italic clamp(30px,4vw,50px)/1.25 "Cormorant Garamond",serif;max-width:24ch;margin:0 auto;text-align:center;text-wrap:balance}
-.quote small{display:block;font:400 14px "Lato",sans-serif;font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--olive);margin-top:28px}
-
-/* Fundador */
-.founder{max-width:760px}
-.letter p{font:300 22px/1.6 "Cormorant Garamond",serif;margin:0 0 18px;max-width:48ch}
-.letter .eyebrow{font:italic 300 20px/1.4 "Cormorant Garamond",serif;color:var(--olive)}
-.sign{font:italic 400 26px "Cormorant Garamond",serif;margin-top:10px}
-.cred{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
-.cred a{color:var(--ink)}
-
-/* FAQ */
-.faq{margin-top:48px;border-top:1px solid var(--line)}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font:400 22px "Cormorant Garamond",serif}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font:300 26px "Lato";color:var(--olive);transition:transform .25s}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{margin:0 0 24px;color:var(--muted);max-width:62ch}
-
-/* Contacto */
-.contact{text-align:center}
-.contact h2{margin:0 auto}
-.contact .lead{margin:22px auto 38px}
-.contact .ways{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:34px;font-size:15px;letter-spacing:.06em}
-.contact .ways a{text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
-footer{padding:34px 0 44px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-
-:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .9s ease,transform .9s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
-
-@media(max-width:900px){
- .hero,.two,.box,.founder-x{grid-template-columns:minmax(0,1fr);gap:40px}
- .album{justify-self:center;max-width:420px}
- .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media(max-width:640px){
- nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--ivory);flex-direction:column;gap:0;padding:8px max(5vw,20px) 18px;border-bottom:1px solid var(--line)}
- nav.open{display:flex}
- nav a{padding:12px 0;border-top:1px solid var(--line)}
- .menu-btn{display:block}
- .band{padding:76px 0}
- .hero{padding-top:28px;padding-bottom:64px}
- .steps{grid-template-columns:minmax(0,1fr);gap:34px}
- .ghost{display:inline-block;margin:20px 0 0}
- .lead,.letter p{font-size:20px}
+a{color:#141414}a:hover{color:#8E2F22}
+.pg{padding:0 32px}
+.rule{border-top:1.5px solid #141414}
+.hair{border-top:1px solid #141414}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c9{grid-column:span 9}.c12{grid-column:span 12}
+.mega{font-size:clamp(96px,21vw,330px);letter-spacing:-.065em;line-height:.78}
+.big{font-size:clamp(40px,6.4vw,96px);letter-spacing:-.045em;line-height:.95}
+.mid{font-size:clamp(26px,3vw,44px);letter-spacing:-.025em;line-height:1.12}
+.row{display:grid;grid-template-columns:120px 1fr auto;align-items:center;gap:24px;padding:22px 0;text-decoration:none;color:#141414}
+.row:hover .rt{color:#8E2F22}
+.lbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.navl{display:flex;gap:28px}
+@media (max-width: 860px){
+.c3,.c4,.c5,.c6,.c7,.c8,.c9{grid-column:span 12}
+.row{grid-template-columns:64px 1fr;}
+.row .rx{display:none}
+.navl{display:none}
+.pg{padding:0 18px}
 }
 </style>
 </head>
 <body>
-
-<header id="hdr">
-  <div class="wrap hd">
-    <a class="brand" href="#top"><b>TIMELESS DOCS</b><span>Capturing Lives. Keeping Them Forever.</span></a>
-    <button class="menu-btn" id="mb" aria-expanded="false" aria-controls="nav">Menú</button>
-    <nav id="nav" aria-label="Principal">
-      <a href="#proceso">Proceso</a>
-      <a href="#archivo">Archivo</a>
-      <a href="#fundador">Fundador</a>
-      <a href="#preguntas">Preguntas</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
+<header class="pg" style="display:flex;justify-content:space-between;align-items:center;min-height:64px;font-size:15px;font-weight:600">
+<nav class="navl" aria-label="Principal"><a href="#familia" style="text-decoration:none">Historias de familia</a><a href="#indice" style="text-decoration:none">Historias de origen</a><a href="#indice" style="text-decoration:none">Colección</a></nav>
+<div style="display:flex;gap:24px;align-items:center"><a href="#regalo" style="text-decoration:none;color:#8E2F22">Regala su historia →</a><a href="#contacto" style="text-decoration:none">Contacto</a></div>
 </header>
-
-<main id="top">
-  <section class="wrap hero">
-    <div>
-      <h1>Documentales de vida para preservar la historia de tu familia</h1>
-      <p>Un estudio boutique de cine documental. Entrevistas, archivo familiar restaurado y una película hecha para heredarse.</p>
-      <a class="btn" href="#contacto">Agendar una conversación</a>
-      <a class="ghost" href="#proceso">Conocer el proceso</a>
-    </div>
-    <div class="album" aria-hidden="true">
-      <svg viewBox="0 0 540 540">
-        <defs>
-          <linearGradient id="sep1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cbb99b"/><stop offset=".55" stop-color="#8f7d63"/><stop offset="1" stop-color="#4d4334"/></linearGradient>
-          <linearGradient id="sep2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9cdb6"/><stop offset=".6" stop-color="#9c9278"/><stop offset="1" stop-color="#5b5848"/></linearGradient>
-          <radialGradient id="glow" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
-          <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .22 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
-          <filter id="sh" x="-10%" y="-10%" width="130%" height="130%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1B1916" flood-opacity=".16"/></filter>
-          <pattern id="sprk" width="22" height="30" patternUnits="userSpaceOnUse"><rect x="6" y="9" width="10" height="12" rx="2" fill="#FFFDFA"/></pattern>
-        </defs>
-        <!-- hoja de álbum -->
-        <rect x="40" y="30" width="460" height="480" fill="#ECE4D8" filter="url(#sh)"/>
-        <!-- foto 1 -->
-        <g transform="rotate(-6 200 190)" filter="url(#sh)">
-          <rect x="78" y="70" width="250" height="230" fill="#FFFDFA"/>
-          <rect x="92" y="84" width="222" height="168" fill="url(#sep1)"/>
-          <rect x="92" y="84" width="222" height="168" fill="url(#glow)"/>
-          <rect x="92" y="84" width="222" height="168" filter="url(#grain)" fill="#000"/>
-          <path d="M92 214 Q150 176 206 202 T314 184 V252 H92Z" fill="#3e352a" opacity=".55"/>
-          <line x1="108" y1="276" x2="210" y2="276" stroke="#8a8170" stroke-width="1"/>
-        </g>
-        <!-- foto 2 -->
-        <g transform="rotate(5 360 300)" filter="url(#sh)">
-          <rect x="250" y="200" width="210" height="250" fill="#FFFDFA"/>
-          <rect x="264" y="214" width="182" height="190" fill="url(#sep2)"/>
-          <rect x="264" y="214" width="182" height="190" fill="url(#glow)"/>
-          <rect x="264" y="214" width="182" height="190" filter="url(#grain)" fill="#000"/>
-          <circle cx="355" cy="292" r="34" fill="#4a463a" opacity=".5"/>
-          <path d="M300 404 Q355 330 410 404Z" fill="#4a463a" opacity=".5"/>
-        </g>
-        <!-- tira de película -->
-        <g transform="rotate(-14 270 430)">
-          <rect x="-20" y="402" width="600" height="72" fill="#1B1916"/>
-          <rect x="-20" y="402" width="600" height="30" fill="url(#sprk)" opacity=".85"/>
-          <rect x="-20" y="444" width="600" height="30" fill="url(#sprk)" opacity=".85"/>
-          <g fill="#5b5848" opacity=".7"><rect x="40" y="430" width="70" height="16"/><rect x="128" y="430" width="70" height="16"/><rect x="216" y="430" width="70" height="16"/><rect x="304" y="430" width="70" height="16"/><rect x="392" y="430" width="70" height="16"/></g>
-        </g>
-      </svg>
-    </div>
-  </section>
-
-  <section class="band sand">
-    <div class="wrap">
-      <p class="eyebrow">El arte de preservar una vida</p>
-      <h2 class="reveal">Una película sobre quienes hicieron a tu familia</h2>
-      <p class="lead reveal">Creamos documentales íntimos que celebran la historia de una familia. Unimos entrevistas cinematográficas, escenas de la vida cotidiana y el archivo familiar restaurado para convertir décadas de recuerdos en una película que se ve, se guarda y se hereda.</p>
-      <div class="two" id="archivo">
-        <div class="line reveal">
-          <h3>Legacy Films</h3>
-          <p>Documentales personalizados donde la voz de tus padres o abuelos, sus fotografías y sus lugares se convierten en una historia contada con el cuidado del cine.</p>
-        </div>
-        <div class="line reveal">
-          <h3>Archivo familiar</h3>
-          <p>Rescatamos lo que se está perdiendo en cajones y cajas.</p>
-          <ul>
-            <li>Digitalización y restauración de fotografías y negativos</li>
-            <li>Cartas y documentos importantes</li>
-            <li>Video casero: VHS, MiniDV, Hi8, DVD</li>
-            <li>Organización de álbumes completos</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="proceso">
-    <div class="wrap">
-      <p class="eyebrow">El proceso</p>
-      <h2 class="reveal">Seis etapas, un solo cuidado</h2>
-      <ol class="steps">
-        <li class="reveal"><span class="num">I</span><h3>Primera conversación</h3><p>Nos sentamos con la familia para entender la historia completa: la vida de los abuelos, los momentos clave, el material que existe y el tono que quieren para la película.</p></li>
-        <li class="reveal"><span class="num">II</span><h3>Rescate del archivo</h3><p>Digitalizamos y restauramos fotografías, negativos, videos caseros y álbumes para que cada recuerdo entre a la película con la mejor calidad posible.</p></li>
-        <li class="reveal"><span class="num">III</span><h3>La entrevista</h3><p>Una conversación íntima y sin prisa, pensada para capturar su voz, su forma de contar, sus gestos, sus risas y sus silencios.</p></li>
-        <li class="reveal"><span class="num">IV</span><h3>La vida cotidiana</h3><p>Los acompañamos en su día: cocinar, caminar, cuidar sus plantas, leer, platicar. Momentos reales que muestran quiénes son.</p></li>
-        <li class="reveal"><span class="num">V</span><h3>Edición</h3><p>Aquí la historia cobra vida. Entrevista, archivo, música y escenas se entretejen en un documental con narrativa de cine.</p></li>
-        <li class="reveal"><span class="num">VI</span><h3>La entrega</h3><p>La película llega a casa en un empaque pensado para durar generaciones, junto con todo el archivo rescatado.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="band ink">
-    <div class="wrap box">
-      <div>
-        <p class="eyebrow">La entrega</p>
-        <h2 class="reveal">Algo que se puede tener en las manos</h2>
-        <p class="lead reveal" style="color:#cfc9bd">La familia no recibe un archivo de video. Recibe una pieza para guardar.</p>
-      </div>
-      <div class="reveal">
-        <ul class="items">
-          <li><span>I</span>El documental en 4K</li>
-          <li><span>II</span>Libro impreso con fotografías, stills y línea de tiempo</li>
-          <li><span>III</span>USB de lujo y copia digital en la nube</li>
-          <li><span>IV</span>El archivo familiar digitalizado y restaurado</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
-      <p class="quote reveal">No buscamos generar nostalgia. Buscamos preservar identidad.<small>Filosofía Timeless Docs</small></p>
-    </div>
-  </section>
-
-  <section class="band sand" id="fundador">
-    <div class="wrap founder">
-      <div class="letter reveal">
-        <p class="eyebrow">Carta del fundador</p>
-        <p>Creo profundamente que cada familia merece preservar su historia, y que la vida de nuestros padres y abuelos merece el mismo cuidado con el que se cuentan las grandes historias del cine.</p>
-        <p>Timeless Docs nació para honrar esas voces y esos recuerdos, y para convertirlos en una película que tu familia pueda ver por generaciones.</p>
-        <p class="sign">Isaac Cázares</p>
-        <p class="cred">Cineasta y editor. Ha trabajado en series y documentales para Netflix, ViX y VICE, en producciones que han pasado por SXSW y han sido reconocidas con el Premio Ariel. <a href="https://www.isaacazares.com" target="_blank" rel="noopener">isaacazares.com</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="preguntas">
-    <div class="wrap">
-      <p class="eyebrow">Preguntas frecuentes</p>
-      <h2 class="reveal">Lo que suelen preguntarnos</h2>
-      <div class="faq">
-        <details><summary>¿Cuánto cuesta un documental?</summary><p>Cada película se cotiza a la medida, según la cantidad de archivo, los días de filmación y la duración final. En la primera conversación te damos una propuesta clara.</p></details>
-        <details><summary>¿Puedo pagar con tarjeta o a meses?</summary><p>Sí. Aceptamos todas las tarjetas y ofrecemos meses sin intereses mediante Mercado Pago.</p></details>
-        <details><summary>¿Cuánto dura el proceso?</summary><p>Entre 4 y 8 semanas, según la cantidad de material.</p></details>
-        <details><summary>¿Qué incluye la entrega?</summary><p>Según el paquete: el documental final, libro impreso, USB de lujo, acceso digital y la digitalización del archivo rescatado.</p></details>
-        <details><summary>¿Pueden grabar fuera de mi ciudad?</summary><p>Sí. Viajamos a cualquier parte de México y al extranjero cuando la historia lo requiere.</p></details>
-        <details><summary>¿Es un buen regalo?</summary><p>Muchas veces son los hijos o los nietos quienes nos buscan para regalarlo a sus padres o abuelos. Nos coordinamos con discreción para que la experiencia empiece desde la primera reunión.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <section class="band ink contact" id="contacto">
-    <div class="wrap">
-      <p class="eyebrow">Contacto</p>
-      <h2>Empecemos por una conversación</h2>
-      <p class="lead" style="color:#cfc9bd">Cuéntanos de quién te gustaría preservar la historia. Te respondemos personalmente.</p>
-      <a class="btn" style="background:var(--ivory);color:var(--ink)" href="mailto:hola@isaacazares.com?subject=Timeless%20Docs">Escribir un correo</a>
-      <div class="ways">
-        <a href="mailto:hola@isaacazares.com">hola@isaacazares.com</a>
-        <a href="https://www.instagram.com/timeless.docs" target="_blank" rel="noopener">Instagram @timeless.docs</a>
-      </div>
-    </div>
-  </section>
+<main>
+<section class="pg" id="inicio" style="padding-bottom:28px">
+<div class="rule" style="padding-top:8px;display:flex;align-items:flex-end;gap:2vw;flex-wrap:wrap">
+<h1 class="mega" style="margin:0;font-weight:700">Acervo</h1>
+<span style="font-size:clamp(22px,4vw,62px);font-weight:700;letter-spacing:.14em;background:#8E2F22;color:#FFFFFF;padding:.18em .2em .14em .34em;line-height:1;margin-bottom:1.2vw">CINE</span>
+</div>
+<div class="g12 rule" style="margin-top:22px;padding-top:12px;row-gap:12px">
+<p class="c4" style="margin:0;font-size:15px;font-weight:600">Documentales de memoria</p>
+<p class="c4" style="margin:0;font-size:15px">San Luis Potosí, México</p>
+<p class="c4" style="margin:0;font-size:15px;text-align:right">Dirección: Isaac Cázares</p>
+</div>
+</section>
+<section class="pg" style="padding-bottom:96px">
+<div style="position:relative;width:100%;aspect-ratio:16/8;overflow:hidden;background:#141414">
+<img fetchpriority="high" src="assets/entrevista.webp" alt="Mujer mayor sonriendo durante una entrevista en su cocina" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%">
+<div style="position:absolute;right:6%;bottom:9%;display:flex;flex-direction:row-reverse;gap:12px;color:#FFFFFF;text-shadow:0 2px 12px rgba(0,0,0,.75)"><span style="width:4px;background:#FFFFFF"></span><div style="display:flex;flex-direction:column;align-items:flex-end"><span style="font-size:clamp(18px,2vw,30px);font-weight:600">Rosa [APELLIDO]</span><span style="font-size:14px">Protagonista · Nació en 1941</span></div></div>
+</div>
+<div class="g12" style="margin-top:14px;row-gap:16px">
+<div class="c3"><p class="lbl" style="margin:0;color:#8E2F22;">HF Nº 014</p></div>
+<div class="c5"><p style="margin:0;font-size:clamp(24px,2.4vw,34px);font-weight:600;font-style:italic;letter-spacing:-.02em;line-height:1.1">La vida de Rosa</p><p style="margin:6px 0 0;font-size:15px;color:#5E5A53">San Luis Potosí, 1941 a la fecha. Documental, [DURACIÓN]. Colección de la familia [APELLIDO].</p></div>
+<p class="c4" style="margin:0;font-size:13px;color:#5E5A53;text-align:right">Imagen ilustrativa</p>
+</div>
+</section>
+<section class="pg" style="padding-bottom:120px">
+<div class="g12 rule" style="padding-top:16px;row-gap:24px">
+<div class="c3"><p class="lbl" style="margin:0;color:#141414;">Sobre el acervo</p></div>
+<div class="c9" style="display:flex;flex-direction:column;gap:28px">
+<p class="mid" style="margin:0;font-weight:500">Cada familia es una colección. Hacemos documentales de vida con el oficio del cine documental profesional, y los entregamos como una pieza de museo: con su número de catálogo, su ficha y su archivo.</p>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#5E5A53;max-width:640px">No es un video de fotos ni de evento social. Es una película sobre una vida, con entrevistas, el archivo de la familia y escenas de su día a día, para que la conozcan las siguientes generaciones.</p>
+</div>
+</div>
+</section>
+<section class="pg" id="indice" style="padding-bottom:120px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:12px"><p class="lbl" style="margin:0;color:#141414;">Índice</p><p class="lbl" style="margin:0;color:#5E5A53;">Tres líneas</p></div>
+<a class="row rule" href="#familia" style=""><span class="lbl">HF</span><span class="big rt" style="font-weight:700">Historias de familia →</span><span class="lbl rx" style="color:#8E2F22">Abierto</span></a>
+<a class="row rule" href="#indice" style=""><span class="lbl">HO</span><span class="big rt" style="font-weight:700">Historias de origen →</span><span class="lbl rx" style="color:#5E5A53">Próximamente</span></a>
+<a class="row rule" href="#indice" style=""><span class="lbl">CA</span><span class="big rt" style="font-weight:700">Colección Acervo →</span><span class="lbl rx" style="color:#5E5A53">Próximamente</span></a>
+<a class="row rule" href="#regalo" style="border-bottom:1.5px solid #141414;"><span class="lbl">2026</span><span class="big rt" style="font-weight:700">Regala su historia →</span><span class="lbl rx" style="color:#8E2F22">Hasta [FECHA]</span></a>
+</section>
+<section class="pg" id="familia" style="padding-bottom:120px">
+<div class="g12 rule" style="padding-top:16px;row-gap:24px;margin-bottom:48px">
+<div class="c3"><p class="lbl" style="margin:0;color:#141414;">Historias de familia</p></div>
+<h2 class="c9 big" style="margin:0;font-weight:700">Una película sobre la vida de quien más quieres.</h2>
+</div>
+<div class="g12 hair" style="padding:16px 0;row-gap:6px"><span class="c3 lbl" style="color:#8E2F22">01</span><span class="c4" style="font-size:22px;font-weight:700;letter-spacing:-.01em">Primera conversación</span><span class="c5" style="font-size:16px;line-height:1.5;color:#5E5A53">Conocemos la historia y armamos una línea de tiempo.</span></div><div class="g12 hair" style="padding:16px 0;row-gap:6px"><span class="c3 lbl" style="color:#8E2F22">02</span><span class="c4" style="font-size:22px;font-weight:700;letter-spacing:-.01em">El archivo</span><span class="c5" style="font-size:16px;line-height:1.5;color:#5E5A53">Fotos, cartas, Super 8 y VHS. Se digitaliza y cada pieza recibe su número.</span></div><div class="g12 hair" style="padding:16px 0;row-gap:6px"><span class="c3 lbl" style="color:#8E2F22">03</span><span class="c4" style="font-size:22px;font-weight:700;letter-spacing:-.01em">Entrevistas</span><span class="c5" style="font-size:16px;line-height:1.5;color:#5E5A53">Con luz, sonido y composición de cine. Su voz, sus gestos, su forma de ser.</span></div><div class="g12 hair" style="padding:16px 0;row-gap:6px"><span class="c3 lbl" style="color:#8E2F22">04</span><span class="c4" style="font-size:22px;font-weight:700;letter-spacing:-.01em">Vida cotidiana</span><span class="c5" style="font-size:16px;line-height:1.5;color:#5E5A53">Cocinar, el jardín, el negocio, las fotos con los nietos.</span></div><div class="g12 hair" style="padding:16px 0;row-gap:6px"><span class="c3 lbl" style="color:#8E2F22">05</span><span class="c4" style="font-size:22px;font-weight:700;letter-spacing:-.01em">Postproducción</span><span class="c5" style="font-size:16px;line-height:1.5;color:#5E5A53">Edición, música, diseño sonoro y color.</span></div><div class="g12 hair" style="padding:16px 0;row-gap:6px"><span class="c3 lbl" style="color:#8E2F22">06</span><span class="c4" style="font-size:22px;font-weight:700;letter-spacing:-.01em">Entrega</span><span class="c5" style="font-size:16px;line-height:1.5;color:#5E5A53">Una caja con la película, su bóveda y su libro.</span></div>
+<div class="hair"></div>
+</section>
+<section class="pg" style="padding-bottom:120px">
+<div class="g12" style="row-gap:48px">
+<div class="c12"><p class="lbl" style="margin:0;color:#141414;">Planes</p></div>
+<div class="c6" style="display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-top:1.5px solid #141414"><span class="mid" style="font-weight:700">Historia</span><span class="lbl" style="color:#8E2F22">8 a 12 min</span></div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Investigación y línea de tiempo</div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Entrevista extensa al protagonista</div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Filmación de su vida cotidiana</div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Archivo digitalizado y catalogado</div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Caja, bóveda, libro y tarjeta</div><div style="border-top:1.5px solid #141414"></div><a href="#contacto" style="margin-top:14px;font-size:16px;font-weight:700;text-decoration:none;color:#8E2F22">Pide tu cotización →</a></div>
+<div class="c6" style="display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-top:1.5px solid #141414"><span class="mid" style="font-weight:700">Legado</span><span class="lbl" style="color:#8E2F22">20 a 25 min</span></div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Diseño narrativo a la medida</div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Protagonistas y familia</div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Dos jornadas de filmación</div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Archivo acordado y restaurado</div><div style="padding:12px 0;border-top:1px solid #141414;font-size:16px">Caja premium y libro editorial</div><div style="border-top:1.5px solid #141414"></div><a href="#contacto" style="margin-top:14px;font-size:16px;font-weight:700;text-decoration:none;color:#8E2F22">Pide tu cotización →</a></div>
+</div>
+</section>
+<section class="pg" style="padding-bottom:120px">
+<div class="g12 rule" style="padding-top:16px;row-gap:24px">
+<div class="c3"><p class="lbl" style="margin:0;color:#141414;">La entrega</p></div>
+<h2 class="c9 big" style="margin:0;font-weight:700">La bóveda es suya. La sala es para verla.</h2>
+<div class="c7" style="margin-top:32px"><img loading="lazy" decoding="async" src="assets/entrega.webp" alt="La entrega: caja negra con etiqueta, libro abierto, disco, USB y tarjeta con QR" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block"><p style="margin:10px 0 0;font-size:13px;color:#5E5A53">Objetos de la entrega HF Nº 014. Imagen ilustrativa.</p></div>
+<div class="c5" style="margin-top:32px;display:flex;flex-direction:column;gap:28px">
+<p style="margin:0;font-size:18px;line-height:1.6">Todo en máxima calidad, en manos de la familia, sin depender de una nube ni de un teléfono. Y una tarjeta para verla donde sea.</p>
+<div><div style="display:flex;gap:16px;padding:10px 0;border-top:1px solid #141414"><span class="lbl" style="width:56px;flex:none;color:#8E2F22">01</span><span style="width:90px;flex:none;font-size:16px;font-weight:700">Caja</span><span style="font-size:16px;color:#5E5A53">Con el sello y la ficha de la película.</span></div><div style="display:flex;gap:16px;padding:10px 0;border-top:1px solid #141414"><span class="lbl" style="width:56px;flex:none;color:#8E2F22">02</span><span style="width:90px;flex:none;font-size:16px;font-weight:700">Disco</span><span style="font-size:16px;color:#5E5A53">La bóveda: todo en máxima calidad.</span></div><div style="display:flex;gap:16px;padding:10px 0;border-top:1px solid #141414"><span class="lbl" style="width:56px;flex:none;color:#8E2F22">03</span><span style="width:90px;flex:none;font-size:16px;font-weight:700">USB</span><span style="font-size:16px;color:#5E5A53">Para verla en la tele.</span></div><div style="display:flex;gap:16px;padding:10px 0;border-top:1px solid #141414"><span class="lbl" style="width:56px;flex:none;color:#8E2F22">04</span><span style="width:90px;flex:none;font-size:16px;font-weight:700">Libro</span><span style="font-size:16px;color:#5E5A53">Fotos, testimonios y línea de tiempo.</span></div><div style="display:flex;gap:16px;padding:10px 0;border-top:1px solid #141414"><span class="lbl" style="width:56px;flex:none;color:#8E2F22">05</span><span style="width:90px;flex:none;font-size:16px;font-weight:700">Tarjeta</span><span style="font-size:16px;color:#5E5A53">Un QR a la película y las fotos.</span></div><div style="display:flex;gap:16px;padding:10px 0;border-top:1px solid #141414"><span class="lbl" style="width:56px;flex:none;color:#8E2F22">06</span><span style="width:90px;flex:none;font-size:16px;font-weight:700">Guía</span><span style="font-size:16px;color:#5E5A53">Cómo cuidar tu acervo.</span></div><div class="hair"></div></div>
+</div>
+</div>
+</section>
+<section id="regalo" style="background:#FFFFFF;color:#141414">
+<div class="pg" style="padding-top:20px;padding-bottom:96px">
+<div class="g12" style="border-top:3px solid #8E2F22;padding-top:16px;row-gap:24px">
+<div class="c3"><p class="lbl" style="margin:0;color:#8E2F22;">Navidad 2026</p></div>
+<h2 class="c9 mega" style="margin:0;font-weight:700;font-size:clamp(72px,13vw,210px);color:#8E2F22">Regala su historia.</h2>
+<div class="c3"></div>
+<p class="c5" style="margin:0;font-size:19px;line-height:1.55">Un certificado de regalo para un documental de Historias de familia. Se entrega en Navidad; la producción se agenda en 2027.</p>
+<div class="c4" style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;gap:16px;padding:8px 0;border-top:1px solid #141414"><span style="width:110px;flex:none;font-size:13px;color:#5E5A53">Línea</span><span style="font-size:15px">Historias de familia</span></div><div style="display:flex;gap:16px;padding:8px 0;border-top:1px solid #141414"><span style="width:110px;flex:none;font-size:13px;color:#5E5A53">Disponible</span><span style="font-size:15px">Hasta [FECHA]</span></div><div class="hair"></div><a href="#contacto" style="margin-top:8px;font-size:17px;font-weight:700;color:#8E2F22">Quiero regalarlo →</a></div>
+</div>
+</div>
+</section>
+<section style="background:#141414;color:#F4F3EF">
+<div class="pg" style="padding-top:20px;padding-bottom:96px">
+<div class="g12" style="border-top:1.5px solid #F4F3EF;padding-top:16px;row-gap:24px">
+<div class="c3"><p class="lbl" style="margin:0;color:#F4F3EF;">El estreno</p></div>
+<h2 class="c9 big" style="margin:0;font-weight:700">El estreno es en casa, con toda la familia.</h2>
+<div class="c12" style="margin-top:24px;position:relative;aspect-ratio:16/8;overflow:hidden"><img loading="lazy" decoding="async" src="assets/estreno.webp" alt="Abuelos y nietos viendo en la tele una foto antigua de la pareja" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%"></div>
+<div class="c3"></div>
+<p class="c6" style="margin:0;font-size:17px;line-height:1.6;color:#B9B4AA">Conectas la USB a la tele o escaneas la tarjeta. Quienes viven lejos la ven el mismo día, desde donde estén.</p>
+<p class="c3" style="margin:0;font-size:13px;color:#B9B4AA;text-align:right">Imagen ilustrativa</p>
+</div>
+</div>
+</section>
+<section class="pg" style="padding-top:120px;padding-bottom:120px">
+<div class="g12 rule" style="padding-top:16px;row-gap:24px">
+<div class="c3"><p class="lbl" style="margin:0;color:#141414;">Dirección</p></div>
+<div class="c5"><h2 class="big" style="margin:0;font-weight:700">Isaac Cázares</h2><p style="margin:16px 0 0;font-size:17px;line-height:1.6;color:#5E5A53">Editor y cineasta potosino. Lleva el oficio del documental profesional a las historias de las familias y los lugares de San Luis Potosí.</p></div>
+<div class="c4"><div style="display:flex;gap:16px;padding:8px 0;border-top:1px solid #141414"><span style="width:110px;flex:none;font-size:13px;color:#5E5A53">Plataformas</span><span style="font-size:15px">Netflix, ViX, VICE</span></div><div style="display:flex;gap:16px;padding:8px 0;border-top:1px solid #141414"><span style="width:110px;flex:none;font-size:13px;color:#5E5A53">Festivales</span><span style="font-size:15px">SXSW 2025</span></div><div style="display:flex;gap:16px;padding:8px 0;border-top:1px solid #141414"><span style="width:110px;flex:none;font-size:13px;color:#5E5A53">Premios</span><span style="font-size:15px">Premio Ariel</span></div><div style="display:flex;gap:16px;padding:8px 0;border-top:1px solid #141414"><span style="width:110px;flex:none;font-size:13px;color:#5E5A53">Base</span><span style="font-size:15px">San Luis Potosí</span></div><div class="hair"></div></div>
+</div>
+</section>
+<section class="pg" id="contacto" style="padding-bottom:64px">
+<div class="rule" style="padding-top:16px;display:flex;flex-direction:column;gap:24px">
+<p class="lbl" style="margin:0;color:#141414;">Contacto</p>
+<a href="#contacto" class="big" style="font-weight:700;text-decoration:none">Cuéntanos de quién es la historia →</a>
+<div class="g12 rule" style="padding-top:12px;row-gap:10px"><p class="c4" style="margin:0;font-size:15px">WhatsApp [NÚMERO]</p><p class="c4" style="margin:0;font-size:15px">[CORREO]</p><p class="c4" style="margin:0;font-size:15px;text-align:right">@acervocine.mx</p></div>
+</div>
+</section>
 </main>
-
-<footer>
-  <div class="wrap"><span>© <span id="yr">2026</span> Timeless Docs</span><span>Capturing Lives. Keeping Them Forever.</span></div>
+<footer style="background:#141414;color:#F4F3EF">
+<div class="pg" style="padding-top:28px;padding-bottom:28px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+<div style="width:120px;height:120px;flex:none;box-sizing:border-box;border:2px solid #F4F3EF;background:#141414;color:#F4F3EF;display:flex;flex-direction:column;justify-content:space-between;padding:6px 7px"><div style="display:flex;justify-content:space-between"><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span></div><div style="display:flex;justify-content:space-between;align-items:flex-end"><span style="font-size:62px;font-weight:700;letter-spacing:-.06em;line-height:.8">AC</span><span style="font-size:8px;font-weight:700;letter-spacing:.06em;line-height:1.15;text-align:right">Nº<br>001</span></div><div style="display:flex;justify-content:space-between"><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span><span style="width:8px;height:5px;background:#F4F3EF;border-radius:2px"></span></div></div>
+<p style="margin:0;font-size:13px;color:#B9B4AA">Acervo Cine · Documentales de memoria · San Luis Potosí</p>
+</div>
 </footer>
-
-<script>
-{
-  const hdr = document.getElementById('hdr');
-  addEventListener('scroll', () => hdr.classList.toggle('sc', scrollY > 10), {passive: true});
-  const mb = document.getElementById('mb'), nav = document.getElementById('nav');
-  mb.addEventListener('click', () => { const o = nav.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); }));
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .15});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-  document.getElementById('yr').textContent = new Date().getFullYear();
-}
-</script>
 </body>
 </html>
